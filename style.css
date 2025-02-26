@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+img {
+    width: 300px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    transition: filter 0.5s ease, transform 0.5s linear; /* Adiciona transição para o movimento */
+    position: relative; /* Importante para usar transform: translateX */
+}
+
+img.desligado {
+    filter: grayscale(100%); /* Define a imagem em tons de cinza */
+}
+
+img.movendo {
+  animation: moverCarro 1s linear forwards;
+}
+
+@keyframes moverCarro {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50px); /* Move 50 pixels para a direita */
+  }
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #3e8e41; /* Verde mais escuro no hover */
+}
